@@ -8,12 +8,8 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 
-  <title>Rania Atmani | Computer Engineering Portfolio</title>
-  <meta name="description" content="Rania Atmani's Computer Engineering portfolio: software projects, interactive algorithm tools, web applications, and embedded prototypes.">
-  <meta property="og:title" content="Rania Atmani | Computer Engineering Portfolio">
-  <meta property="og:description" content="Software, web applications, algorithms, and embedded prototypes.">
-  <meta property="og:image" content="assets/images/site-card.jpg">
-  <meta property="og:type" content="website">
+  <title>Projects | Rania Atmani</title>
+  <meta name="description" content="Selected projects by Rania Atmani, including React applications, Java algorithm visualizers, browser games, embedded prototypes, and C++/Java technical tools.">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -43,99 +39,29 @@
 </header>
 
 <main id="main">
-  <section class="hero-section">
-    <div class="hero-grid container">
-      <div class="hero-copy reveal">
-        <p class="overline"><span class="live-dot"></span> Seeking Fall 2026 co-op opportunities</p>
-        <p class="eyebrow">COMPUTER ENGINEERING · UBC OKANAGAN</p>
-        <h1>Building software and systems that are <em>clear, useful,</em> and grounded in real work.</h1>
-        <p class="hero-lead">I am Rania Atmani, a Computer Engineering student interested in software development, QA and automation, embedded systems, hardware testing, and practical technical tools.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="projects.html">Explore projects <span>↗</span></a>
-          <a class="button secondary" href="about.html">More about me <span>→</span></a>
-        </div>
-        <dl class="hero-stats">
-          <div><dt>86%</dt><dd>current academic average</dd></div>
-          <div><dt>30</dt><dd>public GitHub repositories</dd></div>
-          <div><dt>3</dt><dd>role-targeted résumés</dd></div>
-        </dl>
+  <section class="page-hero projects-hero">
+    <div class="container page-hero-inner reveal">
+      <p class="eyebrow">PROJECTS</p>
+      <h1>Projects that make the technical work <em>visible.</em></h1>
+      <p class="large-copy">Each project below links directly to its public GitHub repository. The images are original project previews created for this portfolio - not claims of a separate live demo.</p>
+    </div>
+  </section>
+
+  <section class="section container project-controls-section">
+    <div class="project-toolbar">
+      <div class="filter-group" role="group" aria-label="Filter projects">
+        <button class="filter-button active" type="button" data-filter="all">All work</button>
+        <button class="filter-button" type="button" data-filter="web">Web apps</button>
+        <button class="filter-button" type="button" data-filter="software">Java tools</button>
+        <button class="filter-button" type="button" data-filter="embedded">Embedded</button>
       </div>
-      <div class="hero-visual reveal delay-1">
-        <div class="hero-photo-shell">
-          <img src="assets/images/rania-atmani.jpg" alt="Rania Atmani in a suit outdoors">
-          <div class="photo-caption"><span>RANIA ATMANI</span><span>BC / CANADA</span></div>
-        </div>
-        <div class="floating-card card-code">
-          <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
-          <pre><code>focus = [
-  "Java",
-  "TypeScript",
-  "Embedded C++",
-  "Engineering systems"
-]</code></pre>
-        </div>
-        <div class="floating-card card-note">
-          <p>Building at the intersection of</p>
-          <strong>software · hardware · operations</strong>
-        </div>
-      </div>
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="projectSearch" type="search" placeholder="Search projects" aria-label="Search projects">
+      </label>
     </div>
-  </section>
 
-  <section class="logo-strip">
-    <div class="container strip-inner" aria-label="Skills">
-      <span>JAVA</span><i>✦</i><span>REACT + TYPESCRIPT</span><i>✦</i><span>C++</span><i>✦</i><span>ALGORITHMS</span><i>✦</i><span>EMBEDDED SYSTEMS</span><i>✦</i><span>TESTING</span>
-    </div>
-  </section>
-
-  <section class="section container intro-block">
-    <div class="section-number">01</div>
-    <div class="intro-copy">
-      <p class="eyebrow">WHAT I BRING</p>
-      <h2>Technical curiosity, structured problem solving, and experience connecting code to <em>real workflows.</em></h2>
-      <p>I build projects in three directions: applications that make a workflow easier to manage, interactive tools that explain technical ideas, and early hardware prototypes that connect software with the physical world.</p>
-      <a class="text-link" href="about.html">Read my full background <span>↗</span></a>
-    </div>
-  </section>
-
-  <section class="section container capability-section">
-    <div class="section-heading">
-      <p class="eyebrow">CORE CAPABILITIES</p>
-      <h2>Areas I am actively building in.</h2>
-    </div>
-    <div class="capability-grid">
-      <article class="capability-card">
-        <span>01</span>
-        <h3>Software & web applications</h3>
-        <p>Java, React, TypeScript, data-driven workflows, reusable UI components, local persistence, and technical documentation.</p>
-      </article>
-      <article class="capability-card">
-        <span>02</span>
-        <h3>Algorithms & problem solving</h3>
-        <p>Data structures, algorithm analysis, debugging, complexity reasoning, edge cases, visualization, and clear explanation.</p>
-      </article>
-      <article class="capability-card">
-        <span>03</span>
-        <h3>Embedded & hardware systems</h3>
-        <p>ESP32, Raspberry Pi, GPIO, sensors, relay logic, serial debugging, validation planning, and hardware-software integration.</p>
-      </article>
-      <article class="capability-card">
-        <span>04</span>
-        <h3>Technical support & QA thinking</h3>
-        <p>Traceable notes, reproducible setup, acceptance criteria, issue follow-up, validation checks, and user-centered troubleshooting.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section container featured-section" id="projects">
-    <div class="section-heading row-heading">
-      <div>
-        <p class="eyebrow">FEATURED WORK</p>
-        <h2>Selected projects.</h2>
-      </div>
-      <a class="button compact secondary" href="projects.html">All projects <span>↗</span></a>
-    </div>
-    <div class="project-grid featured-grid">
+    <div class="project-grid full-project-grid" id="projectGrid">
 
 <article class="project-card" data-category="web" data-search="onsite heating pro react typescript indexeddb a local-first hvac field-service app for jobs, dispatch, invoices, payments, and repeat-visit records.">
   <a class="project-image-link" href="https://github.com/Raat1902/OnsiteHeating-App" target="_blank" rel="noreferrer" aria-label="Open Onsite Heating Pro on GitHub">
@@ -148,7 +74,7 @@
     </div>
     <h3>Onsite Heating Pro</h3>
     <p>A local-first HVAC field-service app for jobs, dispatch, invoices, payments, and repeat-visit records.</p>
-    
+    <p class="project-detail">Built around real HVAC workflows, with multi-role screens, job status updates, notes, invoices, and browser-based local persistence.</p>
     <div class="tech-tags"><span>React</span><span>TypeScript</span><span>IndexedDB</span></div>
     <a class="repo-link" href="https://github.com/Raat1902/OnsiteHeating-App" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
   </div>
@@ -166,7 +92,7 @@
     </div>
     <h3>Algorithm Playground</h3>
     <p>A Java desktop playground for visualizing algorithms instead of treating them as only console output.</p>
-    
+    <p class="project-detail">Includes GUI and CLI modes for sorting, Dijkstra pathfinding, edit-distance dynamic programming, and trie autocomplete.</p>
     <div class="tech-tags"><span>Java 17</span><span>GUI</span><span>Algorithms</span></div>
     <a class="repo-link" href="https://github.com/Raat1902/algorithm-playground" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
   </div>
@@ -184,7 +110,7 @@
     </div>
     <h3>ChessUp Chess Studio</h3>
     <p>A browser-based chess studio with a custom engine, puzzles, review tools, bot play, and ChessUp board workflow support.</p>
-    
+    <p class="project-detail">A larger front-end systems project centered on state, move validation, game interaction, and clear visual review tools.</p>
     <div class="tech-tags"><span>JavaScript</span><span>Game Logic</span><span>UI</span></div>
     <a class="repo-link" href="https://github.com/Raat1902/chessup-chess-studio" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
   </div>
@@ -202,36 +128,76 @@
     </div>
     <h3>ESP32 HVAC Thermostat</h3>
     <p>An early HVAC control prototype connecting temperature sensing, relay behavior, serial debugging, and setup documentation.</p>
-    
+    <p class="project-detail">The project connects HVAC domain knowledge with embedded control logic and hardware-aware validation thinking.</p>
     <div class="tech-tags"><span>C++</span><span>ESP32</span><span>Sensors</span></div>
     <a class="repo-link" href="https://github.com/Raat1902/HVAC-Thermostat-RoughDraft" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
   </div>
 </article>
 
+
+<article class="project-card" data-category="software" data-search="maze generator + solver java dfs bfs a java console project that generates random mazes with dfs and automatically solves them using bfs.">
+  <a class="project-image-link" href="https://github.com/Raat1902/maze-game" target="_blank" rel="noreferrer" aria-label="Open Maze Generator + Solver on GitHub">
+    <img class="project-preview" src="assets/projects/maze-preview.png" alt="Illustrative interface preview for Maze Generator + Solver">
+  </a>
+  <div class="project-content">
+    <div class="project-card-top">
+      <p class="project-index">PROJECT / 05</p>
+      <span class="accent-dot blue"></span>
     </div>
+    <h3>Maze Generator + Solver</h3>
+    <p>A Java console project that generates random mazes with DFS and automatically solves them using BFS.</p>
+    <p class="project-detail">A compact demonstration of graph traversal, state exploration, and readable terminal output.</p>
+    <div class="tech-tags"><span>Java</span><span>DFS</span><span>BFS</span></div>
+    <a class="repo-link" href="https://github.com/Raat1902/maze-game" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+
+
+<article class="project-card" data-category="software" data-search="2d physics playground java simulation physics a step-by-step ascii simulation of a ball under gravity with wall and floor bounces.">
+  <a class="project-image-link" href="https://github.com/Raat1902/physics-playground" target="_blank" rel="noreferrer" aria-label="Open 2D Physics Playground on GitHub">
+    <img class="project-preview" src="assets/projects/physics-preview.png" alt="Illustrative interface preview for 2D Physics Playground">
+  </a>
+  <div class="project-content">
+    <div class="project-card-top">
+      <p class="project-index">PROJECT / 06</p>
+      <span class="accent-dot red"></span>
+    </div>
+    <h3>2D Physics Playground</h3>
+    <p>A step-by-step ASCII simulation of a ball under gravity with wall and floor bounces.</p>
+    <p class="project-detail">Designed to make simulation state, motion, and iterative updates easy to inspect in a terminal environment.</p>
+    <div class="tech-tags"><span>Java</span><span>Simulation</span><span>Physics</span></div>
+    <a class="repo-link" href="https://github.com/Raat1902/physics-playground" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+
+
+<article class="project-card" data-category="software" data-search="symbolic algebra engine java parsing calculus a java cli tool that parses polynomial expressions and calculates derivatives symbolically.">
+  <a class="project-image-link" href="https://github.com/Raat1902/symbolic-algebra-engine" target="_blank" rel="noreferrer" aria-label="Open Symbolic Algebra Engine on GitHub">
+    <img class="project-preview" src="assets/projects/symbolic-preview.png" alt="Illustrative interface preview for Symbolic Algebra Engine">
+  </a>
+  <div class="project-content">
+    <div class="project-card-top">
+      <p class="project-index">PROJECT / 07</p>
+      <span class="accent-dot gold"></span>
+    </div>
+    <h3>Symbolic Algebra Engine</h3>
+    <p>A Java CLI tool that parses polynomial expressions and calculates derivatives symbolically.</p>
+    <p class="project-detail">An exercise in representing mathematical structure, transforming expressions, and validating output.</p>
+    <div class="tech-tags"><span>Java</span><span>Parsing</span><span>Calculus</span></div>
+    <a class="repo-link" href="https://github.com/Raat1902/symbolic-algebra-engine" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+
+    </div>
+    <p id="emptyProjects" class="empty-projects" hidden>No projects match that search yet.</p>
   </section>
 
-  <section class="section container resume-banner">
+  <section class="section container github-banner">
     <div>
-      <p class="eyebrow">ROLE-READY MATERIALS</p>
-      <h2>Three focused résumés for the work I am pursuing.</h2>
-      <p>Software development and QA, embedded systems and hardware validation, plus technical and product support.</p>
+      <p class="eyebrow">MORE TO EXPLORE</p>
+      <h2>There are more projects, experiments, and learning tools on my GitHub.</h2>
     </div>
-    <a class="button primary" href="resumes.html">View résumés <span>↗</span></a>
-  </section>
-
-  <section class="section container contact-section" id="contact">
-    <div class="contact-copy">
-      <p class="eyebrow">CONTACT</p>
-      <h2>Let’s build something that works <em>well</em> in the real world.</h2>
-      <p>For software, QA, embedded, hardware validation, technical support, or engineering co-op opportunities, I would be glad to connect.</p>
-    </div>
-    <div class="contact-card">
-      <a href="mailto:raniaatmani@icloud.com"><span>Email</span><strong>raniaatmani@icloud.com</strong><i>↗</i></a>
-      <a href="tel:+16044421106"><span>Phone</span><strong>604-442-1106</strong><i>↗</i></a>
-      <a href="https://www.linkedin.com/in/rania-atmani-garmavich-13a038365/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Rania Atmani Garmavich</strong><i>↗</i></a>
-      <a href="https://github.com/Raat1902" target="_blank" rel="noreferrer"><span>GitHub</span><strong>@Raat1902</strong><i>↗</i></a>
-    </div>
+    <a class="button primary" href="https://github.com/Raat1902?tab=repositories" target="_blank" rel="noreferrer">Browse all repositories <span>↗</span></a>
   </section>
 </main>
 

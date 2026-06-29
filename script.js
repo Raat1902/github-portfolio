@@ -1,99 +1,96 @@
-(() => {
-  const body = document.body;
-  const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('rania-theme');
-  if (savedTheme === 'dark') body.dataset.theme = 'dark';
 
-  themeToggle?.addEventListener('click', () => {
-    const isDark = body.dataset.theme === 'dark';
+(() => {
+  const root = document.documentElement;
+  const savedTheme = localStorage.getItem("ra-portfolio-theme");
+  if (savedTheme === "dark") root.setAttribute("data-theme", "dark");
+
+  const themeToggle = document.getElementById("themeToggle");
+  themeToggle?.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
     if (isDark) {
-      delete body.dataset.theme;
-      localStorage.setItem('rania-theme', 'light');
+      root.removeAttribute("data-theme");
+      localStorage.setItem("ra-portfolio-theme", "light");
     } else {
-      body.dataset.theme = 'dark';
-      localStorage.setItem('rania-theme', 'dark');
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem("ra-portfolio-theme", "dark");
     }
   });
 
-  const menuButton = document.getElementById('menuButton');
-  const navLinks = document.getElementById('navLinks');
-  menuButton?.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
+  menuButton?.addEventListener("click", () => {
+    const opened = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(opened));
+    document.body.classList.toggle("menu-open", opened);
   });
-  navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-  }));
+  navLinks?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+    });
+  });
 
-  const scrollProgress = document.getElementById('scrollProgress');
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  const page = path === "index.html" || path === "" ? "home" : path.replace(".html", "");
+  document.querySelectorAll("[data-nav]").forEach((link) => {
+    if (link.dataset.nav === page) link.classList.add("active");
+  });
+
+  const progress = document.getElementById("scrollProgress");
   const updateProgress = () => {
-    if (!scrollProgress) return;
-    const height = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = height > 0 ? (window.scrollY / height) * 100 : 0;
-    scrollProgress.style.width = `${progress}%`;
+    if (!progress) return;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+    progress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
   };
-  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener("scroll", updateProgress, { passive: true });
   updateProgress();
 
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
+  const revealItems = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13 });
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("in-view"));
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: .12 });
-  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-
-  const filterButtons = document.querySelectorAll('.filter');
-  const searchInput = document.getElementById('projectSearch');
-  const cards = [...document.querySelectorAll('.project-card')];
-  const emptyState = document.getElementById('emptyState');
-  let activeFilter = 'all';
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const projectCards = document.querySelectorAll(".project-card");
+  const search = document.getElementById("projectSearch");
+  const empty = document.getElementById("emptyProjects");
+  let activeFilter = "all";
 
   const updateProjects = () => {
-    const query = (searchInput?.value || '').trim().toLowerCase();
+    if (!projectCards.length) return;
+    const term = (search?.value || "").trim().toLowerCase();
     let visible = 0;
-    cards.forEach((card) => {
-      const categoryMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
-      const queryMatch = !query || card.dataset.search.includes(query) || card.textContent.toLowerCase().includes(query);
-      const show = categoryMatch && queryMatch;
+    projectCards.forEach((card) => {
+      const matchesFilter = activeFilter === "all" || card.dataset.category === activeFilter;
+      const matchesSearch = !term || (card.dataset.search || "").includes(term);
+      const show = matchesFilter && matchesSearch;
       card.hidden = !show;
       if (show) visible += 1;
     });
-    if (emptyState) emptyState.hidden = visible > 0;
+    if (empty) empty.hidden = visible !== 0;
   };
 
-  filterButtons.forEach((button) => button.addEventListener('click', () => {
-    activeFilter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle('active', item === button));
-    updateProjects();
-  }));
-  searchInput?.addEventListener('input', updateProjects);
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter || "all";
+      filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+      updateProjects();
+    });
+  });
+  search?.addEventListener("input", updateProjects);
 
-  const setText = (id, value) => {
-    const node = document.getElementById(id);
-    if (node && Number.isFinite(value)) node.textContent = value;
-  };
-  fetch('https://api.github.com/users/Raat1902')
-    .then((response) => response.ok ? response.json() : Promise.reject())
-    .then((profile) => {
-      setText('repoCount', profile.public_repos);
-      setText('liveRepos', profile.public_repos);
-      setText('liveFollowers', profile.followers);
-    })
-    .catch(() => {});
-
-  fetch('https://api.github.com/users/Raat1902/repos?per_page=100')
-    .then((response) => response.ok ? response.json() : Promise.reject())
-    .then((repos) => {
-      const stars = repos.reduce((total, repo) => total + (repo.stargazers_count || 0), 0);
-      setText('liveStars', stars);
-    })
-    .catch(() => {});
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 })();

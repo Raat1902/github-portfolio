@@ -2,91 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="About Rania Atmani: Computer Engineering student building useful software, algorithm tools, web apps, and embedded prototypes.">
-  <meta name="theme-color" content="#101724">
-  <title>About Rania Atmani | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+
+  <title>About Rania Atmani | Computer Engineering Portfolio</title>
+  <meta name="description" content="About Rania Atmani: UBC Okanagan Computer Engineering student with experience in software, HVAC field operations, embedded prototypes, and technical documentation.">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <header class="page-header">
-    <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="index.html" aria-label="Rania Atmani home"><span class="brand-mark">RA</span><span>Rania Atmani</span></a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="resume.html">Résumé</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="nav-actions">
-        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Toggle colour theme">◐</button>
-        <button class="menu-button" id="menuButton" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
-      </div>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="Rania Atmani home">
+      <span class="brand-mark">RA</span>
+      <span>Rania Atmani</span>
+    </a>
 
-  <main id="main">
-    <section class="about-hero container section-pad">
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a data-nav="home" href="index.html">Home</a>
+      <a data-nav="about" href="about.html">About</a>
+      <a data-nav="projects" href="projects.html">Projects</a>
+      <a data-nav="resumes" href="resumes.html">Résumés</a>
+      <a data-nav="contact" href="index.html#contact">Contact</a>
+    </div>
+
+    <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle color theme">◐</button>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero about-hero">
+    <div class="container about-grid">
       <div class="about-hero-copy reveal">
         <p class="eyebrow">ABOUT ME</p>
-        <h1>Hi, I’m <em>Rania.</em></h1>
-        <p class="large-copy">I am a Computer Engineering student who enjoys turning complex ideas into clear, useful software and prototypes.</p>
-      </div>
-      <div class="about-hero-image reveal delay-1"><img src="assets/rania-headshot.jpg" alt="Rania Atmani"><div class="image-caption"><span>RA / 2026</span><span>British Columbia, Canada</span></div></div>
-    </section>
-
-    <section class="container story-section section-pad">
-      <div class="section-kicker"><span>01</span><span>MY STORY</span></div>
-      <div class="story-grid">
-        <h2 class="section-title reveal">I build to understand, and I understand by <em>building.</em></h2>
-        <div class="story-copy reveal delay-1">
-          <p>I’m currently studying Computer Engineering at UBC Okanagan. My work sits at the intersection of software engineering, algorithms, interactive systems, and early embedded prototypes. I am especially drawn to projects where thoughtful technical choices lead to a better experience for the person using the product.</p>
-          <p>What keeps me interested is the translation process: taking an idea that is still rough, deciding what it needs to do, creating a solid first version, testing it, and then making it clearer and more reliable. That is why I enjoy building tools such as algorithm visualizers, practical workflow applications, browser-based systems, and small systems projects.</p>
+        <h1>I build by asking: <em>what would make this genuinely useful?</em></h1>
+        <p class="large-copy">I am Rania Atmani, a Computer Engineering student at the University of British Columbia Okanagan. I am most energized by work that connects careful technical reasoning with a practical outcome for a real person, team, or workflow.</p>
+        <div class="inline-links">
+          <a href="mailto:raniaatmani@icloud.com">Email me <span>↗</span></a>
+          <a href="resumes.html">View résumés <span>↗</span></a>
         </div>
       </div>
-    </section>
+      <figure class="about-photo reveal delay-1">
+        <img src="assets/images/rania-atmani-about.jpg" alt="Rania Atmani in a suit against a mountain and waterfront backdrop">
+        <figcaption><span>RANIA ATMANI</span><span>COMPUTER ENGINEERING</span></figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <section class="container section-pad values-section">
-      <div class="section-kicker"><span>02</span><span>HOW I WORK</span></div>
-      <div class="values-grid">
-        <article class="value-card reveal"><span>01</span><h3>Start with the problem</h3><p>I first identify the person, workflow, or concept a project should serve. A good feature needs a real reason to exist.</p></article>
-        <article class="value-card reveal delay-1"><span>02</span><h3>Build a reliable core</h3><p>I focus on getting the core logic clear and working before adding polish, so the design has a stable foundation.</p></article>
-        <article class="value-card reveal delay-2"><span>03</span><h3>Refine what people see</h3><p>Once the system works, I improve the experience: the flow, labels, visual hierarchy, and small details that make a tool easier to use.</p></article>
+  <section class="section container story-section">
+    <div class="section-number">01</div>
+    <div class="story-layout">
+      <div>
+        <p class="eyebrow">MY DIRECTION</p>
+        <h2>Software is most interesting to me when it makes a system easier to understand, test, or use.</h2>
       </div>
-    </section>
-
-    <section class="container section-pad timeline-section">
-      <div class="section-kicker"><span>03</span><span>BACKGROUND</span></div>
-      <div class="timeline">
-        <article class="timeline-row reveal"><div class="timeline-time">NOW</div><div><h3>Computer Engineering</h3><p class="timeline-place">University of British Columbia Okanagan</p><p>Developing a foundation across programming, systems, technical communication, mathematics, circuits, and engineering problem solving.</p></div></article>
-        <article class="timeline-row reveal delay-1"><div class="timeline-time">FOUNDATION</div><div><h3>Engineering Foundations</h3><p class="timeline-place">Douglas College</p><p>Built core engineering and programming skills through a broad academic foundation, including mathematics, programming, chemistry, and technical coursework.</p></div></article>
-        <article class="timeline-row reveal delay-2"><div class="timeline-time">PRACTICAL</div><div><h3>HVAC operations and field exposure</h3><p class="timeline-place">Customer-facing and hands-on support</p><p>Experience around scheduling, documentation, invoices, customer communication, site readiness, and HVAC work has shaped my interest in software that improves real operational workflows.</p></div></article>
+      <div class="story-copy">
+        <p>My interests span software development, QA and automation, embedded systems, hardware testing, and technical support. What connects those areas is the work of taking something complex - a system, a workflow, a prototype, or a technical issue - and turning it into something more reliable and easier to work with.</p>
+        <p>That is why my portfolio includes an HVAC field-service application, an interactive Java algorithm visualizer, browser-based game systems, and embedded-control prototypes. Each one begins with a different problem, but all of them require the same habits: define what should happen, build the core carefully, test and document it, then improve the experience around it.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="about-focus-section">
-      <div class="container focus-wrap">
-        <div class="reveal"><div class="section-kicker light"><span>04</span><span>WHAT I AM GROWING</span></div><h2>Currently deepening my skills in <em>four areas.</em></h2></div>
-        <ul class="growth-list reveal delay-1"><li><span>01</span>Software engineering fundamentals and clean project structure</li><li><span>02</span>Data structures, algorithms, and performance-aware problem solving</li><li><span>03</span>Modern web development with TypeScript and React</li><li><span>04</span>Embedded systems and the software-hardware connection</li></ul>
+  <section class="section container fact-grid-section">
+    <div class="fact-grid">
+      <article><strong>86%</strong><span>Computer Engineering average</span></article>
+      <article><strong>30</strong><span>Public GitHub repositories</span></article>
+      <article><strong>600+</strong><span>Hours supporting HVAC operations and field work</span></article>
+      <article><strong>3</strong><span>Role-focused résumé versions</span></article>
+    </div>
+  </section>
+
+  <section class="section container timeline-section">
+    <div class="section-number">02</div>
+    <div class="section-heading">
+      <p class="eyebrow">EDUCATION & EXPERIENCE</p>
+      <h2>My engineering background.</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-row reveal">
+        <div class="timeline-date">2025 - 2028</div>
+        <div class="timeline-line"></div>
+        <div>
+          <h3>University of British Columbia Okanagan</h3>
+          <p class="timeline-role">BASc Computer Engineering, Co-op Program</p>
+          <p>Building a foundation across data structures, object-oriented programming, digital logic, signals and communication systems, electric circuits, numerical methods, and design studio work.</p>
+        </div>
+      </article>
+      <article class="timeline-row reveal delay-1">
+        <div class="timeline-date">2024 - 2025</div>
+        <div class="timeline-line"></div>
+        <div>
+          <h3>Douglas College</h3>
+          <p class="timeline-role">Engineering Foundations Certificate · Honour Roll</p>
+          <p>Completed a broad engineering foundation that strengthened mathematics, programming, technical communication, and structured problem solving.</p>
+        </div>
+      </article>
+      <article class="timeline-row reveal delay-2">
+        <div class="timeline-date">2024 - 2025</div>
+        <div class="timeline-line"></div>
+        <div>
+          <h3>Onsite Heating & Cooling</h3>
+          <p class="timeline-role">Assistant Technician</p>
+          <p>Supported service-call readiness, tools and parts preparation, technician notes, follow-up tracking, and field documentation. This experience directly influenced the workflow and feature choices behind Onsite Heating Pro.</p>
+        </div>
+      </article>
+      <article class="timeline-row reveal delay-3">
+        <div class="timeline-date">2022 - 2025</div>
+        <div class="timeline-line"></div>
+        <div>
+          <h3>All West Heating</h3>
+          <p class="timeline-role">Administrative and Field Assistant</p>
+          <p>Contributed more than 600 hours across scheduling, invoice and parts records, service documentation, installation support, safety checks, and customer follow-up.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section dark-panel-section">
+    <div class="container growth-grid">
+      <div>
+        <p class="eyebrow light">HOW I WORK</p>
+        <h2>I care about the details that make a technical project <em>trustworthy.</em></h2>
       </div>
-    </section>
+      <div class="principles-list">
+        <article><span>01</span><div><h3>Start from requirements</h3><p>Identify who the work is for, what the core behavior should be, and what would count as a useful first version.</p></div></article>
+        <article><span>02</span><div><h3>Make work traceable</h3><p>Use setup notes, validation checks, clear naming, status updates, and practical documentation so the next person can understand what happened.</p></div></article>
+        <article><span>03</span><div><h3>Test the edges, not just the happy path</h3><p>Think through states, missing data, unexpected inputs, real user workflows, and the gap between expected and observed behavior.</p></div></article>
+        <article><span>04</span><div><h3>Keep learning through building</h3><p>Projects are my way of reinforcing theory, getting feedback from real constraints, and steadily taking on more technical depth.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-    <section class="container section-pad about-connect reveal">
-      <div><p class="eyebrow">LET’S CONNECT</p><h2 class="section-title">I am always interested in learning from people who care about building things <em>well.</em></h2></div>
-      <div class="stacked-actions"><a class="button button-primary" href="mailto:raniaatmani22@gmail.com">Email me <span>↗</span></a><a class="button button-dark" href="https://www.linkedin.com/in/rania-atmani-garmavich-13a038365" target="_blank" rel="noreferrer">Connect on LinkedIn <span>↗</span></a></div>
-    </section>
-  </main>
+  <section class="section container focus-section">
+    <div class="section-number">03</div>
+    <div class="focus-layout">
+      <div>
+        <p class="eyebrow">CURRENT FOCUS</p>
+        <h2>Where I am growing next.</h2>
+      </div>
+      <div class="focus-pills">
+        <span>Software engineering fundamentals</span>
+        <span>Data structures & algorithms</span>
+        <span>React + TypeScript applications</span>
+        <span>Testing & validation habits</span>
+        <span>Embedded control systems</span>
+        <span>Hardware-software integration</span>
+        <span>Technical documentation</span>
+        <span>Engineering design teams</span>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer container"><p>© <span id="year"></span> Rania Atmani. Designed and built with HTML, CSS, and JavaScript.</p><a href="#main">Back to top ↑</a></footer>
-  <script src="script.js"></script>
+  <section class="section container about-contact">
+    <div>
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Interested in a co-op candidate who takes ownership, documents the work, and keeps learning?</h2>
+    </div>
+    <div class="about-contact-actions">
+      <a class="button primary" href="mailto:raniaatmani@icloud.com">Email Rania <span>↗</span></a>
+      <a class="button secondary" href="projects.html">See projects <span>→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="footer-brand" href="index.html">Rania Atmani</a>
+      <p>Computer Engineering Portfolio</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:raniaatmani@icloud.com">Email</a>
+      <a href="tel:+16044421106">604-442-1106</a>
+      <a href="https://www.linkedin.com/in/rania-atmani-garmavich-13a038365/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/Raat1902" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> Rania Atmani. Built with HTML, CSS, and JavaScript.</div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
