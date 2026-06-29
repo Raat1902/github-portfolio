@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17112d"/>
+      <stop offset="100%" stop-color="#172548"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7f463"/>
+      <stop offset="100%" stop-color="#8faeff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#060b19" flood-opacity=".42"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dae5ff" opacity=".10" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect width="1200" height="680" fill="url(#grid)"/>
+  
+<rect x="215" y="119" width="775" height="440" rx="27" fill="#0d1530" stroke="#9eafd1" stroke-opacity=".35"/>
+<text x="275" y="218" fill="#b7f463" font-family="monospace" font-size="27">f(x) = 3x³ - 6x² + 4x - 1</text>
+<path d="M272 287H930" stroke="#3e527a" stroke-width="2"/><text x="275" y="354" fill="#8faeff" font-family="monospace" font-size="27">f'(x) = 9x² - 12x + 4</text>
+<g transform="translate(275 405)" fill="#eaf0fb"><circle cx="12" cy="12" r="12"/><circle cx="74" cy="12" r="12"/><circle cx="136" cy="12" r="12"/></g>
+<path d="M647 431 C724 354 787 503 880 401" stroke="#ff9ad2" stroke-width="12" fill="none" stroke-linecap="round"/>
+<text x="83" y="72" fill="#eef2ff" font-family="Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="2">SYMBOLIC ALGEBRA ENGINE</text>
+
+</svg>

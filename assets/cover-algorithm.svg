@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10122d"/>
+      <stop offset="100%" stop-color="#172548"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7f463"/>
+      <stop offset="100%" stop-color="#8faeff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#060b19" flood-opacity=".42"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dae5ff" opacity=".10" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect width="1200" height="680" fill="url(#grid)"/>
+  
+  <circle cx="1040" cy="102" r="240" fill="#b7f463" opacity=".12"/>
+  <circle cx="150" cy="600" r="210" fill="#ff9ad2" opacity=".10"/>
+  <g filter="url(#shadow)">
+    <rect x="201" y="126" width="798" height="430" rx="25" fill="#101b37" stroke="#9eafd1" stroke-opacity=".35"/>
+    <rect x="201" y="126" width="798" height="50" rx="25" fill="#172548"/>
+    <circle cx="237" cy="151" r="7" fill="#ff9ad2"/><circle cx="260" cy="151" r="7" fill="#b7f463"/><circle cx="283" cy="151" r="7" fill="#8faeff"/>
+    <rect x="237" y="210" width="200" height="302" rx="15" fill="#0c1530"/>
+    <rect x="467" y="210" width="495" height="302" rx="15" fill="#0c1530"/>
+    <text x="267" y="250" fill="#b7f463" font-family="monospace" font-size="20">ALGORITHMS</text>
+    <g fill="#8faeff"><rect x="267" y="284" width="122" height="14" rx="7"/><rect x="267" y="321" width="95" height="14" rx="7"/><rect x="267" y="358" width="135" height="14" rx="7"/><rect x="267" y="395" width="77" height="14" rx="7"/><rect x="267" y="432" width="116" height="14" rx="7"/></g>
+    <g stroke="#b7f463" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M535 446 L610 316 L697 426 L774 276 L876 353"/>
+      <path d="M535 446 L590 446 L635 395 L697 426 L747 397 L774 276 L816 330 L876 353"/>
+    </g>
+    <g fill="#b7f463"><circle cx="535" cy="446" r="12"/><circle cx="610" cy="316" r="12"/><circle cx="697" cy="426" r="12"/><circle cx="774" cy="276" r="12"/><circle cx="876" cy="353" r="12"/></g>
+  </g>
+  <text x="83" y="79" fill="#eef2ff" font-family="Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="2">ALGORITHM PLAYGROUND</text>
+
+</svg>

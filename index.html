@@ -1,244 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio of Rania Atmani, a Computer Engineering student building software, interactive systems, and embedded prototypes.">
+  <meta name="theme-color" content="#101724">
+  <meta property="og:title" content="Rania Atmani | Computer Engineering Portfolio">
+  <meta property="og:description" content="Software, interactive systems, algorithms, and embedded prototypes.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.svg">
   <title>Rania Atmani | Portfolio</title>
-  <meta name="description" content="Computer Engineering portfolio for Rania Atmani: software, embedded systems, research, and engineering projects." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="logo" href="#home">Rania Atmani</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-        ☰
-      </button>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Rania Atmani home">
+        <span class="brand-mark">RA</span>
+        <span>Rania Atmani</span>
+      </a>
 
       <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
+        <a href="resume.html">Résumé</a>
         <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Toggle colour theme">◐</button>
+        <button class="menu-button" id="menuButton" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
       </div>
     </nav>
 
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">Computer Engineering Student</p>
-        <h1>Building software, embedded systems, and research-driven technology.</h1>
-        <p class="hero-text">
-          I am interested in software engineering, embedded systems, biomedical technology,
-          AI tools, and practical engineering projects that solve real problems.
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <div class="availability"><span></span> Open to software and engineering opportunities</div>
+        <p class="eyebrow">COMPUTER ENGINEERING · BRITISH COLUMBIA</p>
+        <h1>Building <em>useful</em> software from technical ideas.</h1>
+        <p class="hero-lead">
+          I’m Rania, a Computer Engineering student focused on software engineering,
+          interactive algorithm tools, web applications, and embedded-system prototypes.
         </p>
-
-        <div class="hero-buttons">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <span>↓</span></a>
+          <a class="button button-ghost" href="about.html">About me <span>↗</span></a>
         </div>
+        <dl class="hero-stats" aria-label="Portfolio summary">
+          <div><dt id="repoCount">30</dt><dd>public repositories</dd></div>
+          <div><dt>04</dt><dd>build areas</dd></div>
+          <div><dt>∞</dt><dd>curiosity to learn</dd></div>
+        </dl>
       </div>
 
-      <div class="hero-card">
-        <p class="card-label">Currently focused on</p>
-        <ul>
-          <li>Java, C, Python, and MATLAB</li>
-          <li>Data structures and algorithms</li>
-          <li>Embedded systems and hardware projects</li>
-          <li>Software co-op and internship applications</li>
-        </ul>
+      <div class="hero-visual reveal delay-1" aria-label="Rania Atmani profile photo and technology focus">
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+        <article class="profile-card">
+          <div class="profile-card-top"><span>PORTFOLIO / 2026</span><span class="pulse-dot"></span></div>
+          <div class="portrait-wrap"><img src="assets/rania-headshot.jpg" alt="Rania Atmani"></div>
+          <div class="profile-card-bottom">
+            <div><small>STUDYING</small><strong>Computer Engineering</strong></div>
+            <span aria-hidden="true">↗</span>
+          </div>
+        </article>
+        <div class="floating-panel floating-code">
+          <div class="window-dots"><i></i><i></i><i></i><b>focus.ts</b></div>
+          <pre><code><span>const</span> focus = [
+  "Java",
+  "TypeScript",
+  "C / C++",
+  "React"
+];</code></pre>
+        </div>
+        <div class="floating-panel floating-note"><small>NOW EXPLORING</small><strong>Algorithms · Web apps · Embedded systems</strong></div>
       </div>
     </section>
+
+    <div class="ticker" aria-hidden="true"><div>
+      <span>SOFTWARE</span><i>✦</i><span>ALGORITHMS</span><i>✦</i><span>WEB APPLICATIONS</span><i>✦</i><span>EMBEDDED PROTOTYPES</span><i>✦</i><span>ENGINEERING THINKING</span><i>✦</i>
+      <span>SOFTWARE</span><i>✦</i><span>ALGORITHMS</span><i>✦</i><span>WEB APPLICATIONS</span><i>✦</i><span>EMBEDDED PROTOTYPES</span><i>✦</i><span>ENGINEERING THINKING</span><i>✦</i>
+    </div></div>
   </header>
 
-  <main>
-    <section class="section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">About</p>
-        <h2>About Me</h2>
+  <main id="main">
+    <section class="intro-section container section-pad">
+      <div class="section-kicker"><span>01</span><span>WHAT I BUILD</span></div>
+      <div class="intro-grid">
+        <h2 class="section-title reveal">Projects with a <em>purpose</em> behind them.</h2>
+        <div class="intro-copy reveal delay-1">
+          <p>I enjoy making systems that have a clear reason to exist: an app that makes a workflow easier, a visual tool that makes a difficult concept easier to understand, or a prototype that turns an idea into something testable.</p>
+          <a class="text-link" href="about.html">More about how I work <span>→</span></a>
+        </div>
       </div>
-
-      <div class="about-grid">
-        <p>
-          I am a Computer Engineering student with a strong interest in software engineering,
-          embedded systems, AI, and biomedical engineering. My academic background includes
-          engineering, programming, circuits, mathematics, and technical problem solving.
-        </p>
-        <p>
-          I enjoy building projects that connect software with real-world systems, especially
-          projects involving automation, simulations, hardware, and useful tools. I am currently
-          developing my portfolio to showcase my technical growth and prepare for co-op and
-          internship opportunities.
-        </p>
+      <div class="focus-grid">
+        <article class="focus-card reveal"><span class="focus-number">01</span><h3>Practical applications</h3><p>Useful tools organized around real workflows, clear actions, and reliable state.</p></article>
+        <article class="focus-card reveal delay-1"><span class="focus-number">02</span><h3>Interactive systems</h3><p>Interfaces where people can explore algorithms, strategy, simulation, and logic.</p></article>
+        <article class="focus-card reveal delay-2"><span class="focus-number">03</span><h3>Engineering prototypes</h3><p>Early hardware and software experiments that connect code with real-world systems.</p></article>
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">
-          Replace the placeholder GitHub links with your actual project links.
-        </p>
-      </div>
+    <section class="projects-section" id="projects">
+      <div class="container section-pad">
+        <div class="section-heading-row">
+          <div>
+            <div class="section-kicker"><span>02</span><span>SELECTED WORK</span></div>
+            <h2 class="section-title reveal">Things I have <em>built.</em></h2>
+          </div>
+          <p class="section-aside reveal delay-1">Each project is linked directly to its public GitHub repository, so you can see the code, structure, and documentation.</p>
+        </div>
 
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Embedded Systems</span>
-            <span class="tag">C++</span>
+        <div class="project-controls reveal">
+          <div class="filter-row" role="group" aria-label="Filter projects">
+            <button class="filter active" type="button" data-filter="all">All work</button>
+            <button class="filter" type="button" data-filter="web">Web apps</button>
+            <button class="filter" type="button" data-filter="algorithms">Algorithms</button>
+            <button class="filter" type="button" data-filter="systems">Systems</button>
+            <button class="filter" type="button" data-filter="games">Interactive</button>
           </div>
-          <h3>HVAC Smart Thermostat</h3>
-          <p>
-            A smart thermostat concept using an ESP32, relay control, DHT11 sensor,
-            OLED display, and custom logic for temperature monitoring and HVAC control.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
+          <label class="project-search"><span>⌕</span><input id="projectSearch" type="search" placeholder="Search projects" aria-label="Search projects"></label>
+        </div>
 
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Software</span>
-            <span class="tag">Finance</span>
-          </div>
-          <h3>SmartSpend</h3>
-          <p>
-            A personal finance tool designed to help users track expenses, organize
-            spending categories, and better understand their budget habits.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card project-featured" data-category="web" data-search="onsite heating pro hvc field service react typescript indexeddb invoices dispatch payments">
+            <img src="assets/cover-onsite.svg" alt="Abstract illustration for Onsite Heating Pro">
+            <div class="project-content">
+              <div class="project-meta"><span>FEATURED / WEB APP</span><span>2026</span></div>
+              <h3>Onsite Heating Pro</h3>
+              <p>Local-first HVAC field-service web app for jobs, dispatch, invoices, payments, and service workflow management.</p>
+              <ul class="tech-list"><li>React</li><li>TypeScript</li><li>IndexedDB</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/OnsiteHeating-App" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Research</span>
-            <span class="tag">Simulation</span>
-          </div>
-          <h3>BioScope Research Simulation</h3>
-          <p>
-            A research-focused simulation exploring rare cancer signal capture,
-            magnetic retrieval, circulation time, and uncertainty-aware AI interpretation.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
-          </div>
-        </article>
+          <article class="project-card" data-category="algorithms" data-search="algorithm playground java visualizations sorting graphs dynamic programming data structures">
+            <img src="assets/cover-algorithm.svg" alt="Abstract illustration for Algorithm Playground">
+            <div class="project-content">
+              <div class="project-meta"><span>JAVA / ALGORITHMS</span><span>2026</span></div>
+              <h3>Algorithm Playground</h3>
+              <p>An interactive Java GUI for exploring sorting, graphs, dynamic programming, data structures, and algorithm behavior.</p>
+              <ul class="tech-list"><li>Java</li><li>GUI</li><li>Data structures</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/algorithm-playground" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Math</span>
-            <span class="tag">Algorithms</span>
-          </div>
-          <h3>Matrix Calculator</h3>
-          <p>
-            A calculator for matrix operations such as addition, multiplication,
-            determinants, and linear algebra practice.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
+          <article class="project-card" data-category="games" data-search="chessup chess studio javascript chess engine puzzles review bot browser">
+            <img src="assets/cover-chess.svg" alt="Abstract illustration for ChessUp Chess Studio">
+            <div class="project-content">
+              <div class="project-meta"><span>JAVASCRIPT / INTERACTIVE</span><span>2026</span></div>
+              <h3>ChessUp Chess Studio</h3>
+              <p>A browser-based chess studio with a custom JavaScript chess engine, puzzles, review tools, bot play, and board workflow support.</p>
+              <ul class="tech-list"><li>JavaScript</li><li>Chess engine</li><li>Web app</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/chessup-chess-studio" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Game Logic</span>
-            <span class="tag">OOP</span>
-          </div>
-          <h3>CLI Chess</h3>
-          <p>
-            A command-line chess project focused on object-oriented design,
-            board representation, move validation, and game state logic.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
+          <article class="project-card" data-category="systems" data-search="hvc thermostat rough draft esp32 c++ embedded systems sensors relay">
+            <img src="assets/cover-thermostat.svg" alt="Abstract illustration for HVAC Thermostat Prototype">
+            <div class="project-content">
+              <div class="project-meta"><span>C++ / PROTOTYPE</span><span>2026</span></div>
+              <h3>HVAC Thermostat Prototype</h3>
+              <p>Early C++ work for an HVAC thermostat concept: a starting point for exploring embedded control and environmental sensing.</p>
+              <ul class="tech-list"><li>C++</li><li>Embedded systems</li><li>HVAC</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/HVAC-Thermostat-RoughDraft" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-topline">
-            <span class="tag">Physics</span>
-            <span class="tag">Simulation</span>
-          </div>
-          <h3>2D Physics Playground</h3>
-          <p>
-            An interactive physics-based project involving motion, forces,
-            collisions, and simulated object behavior.
-          </p>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
+          <article class="project-card" data-category="algorithms" data-search="maze generator solver java dfs bfs graph algorithms console">
+            <img src="assets/cover-maze.svg" alt="Abstract illustration for Maze Generator and Solver">
+            <div class="project-content">
+              <div class="project-meta"><span>JAVA / GRAPH ALGORITHMS</span><span>2026</span></div>
+              <h3>Maze Generator + Solver</h3>
+              <p>Console-based maze generator using DFS and an automatic solver using BFS, displayed in ASCII.</p>
+              <ul class="tech-list"><li>Java</li><li>DFS</li><li>BFS</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/maze-game" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="systems" data-search="symbolic algebra engine java polynomial derivatives calculus parser">
+            <img src="assets/cover-symbolic.svg" alt="Abstract illustration for Symbolic Algebra Engine">
+            <div class="project-content">
+              <div class="project-meta"><span>JAVA / LOGIC</span><span>2026</span></div>
+              <h3>Symbolic Algebra Engine</h3>
+              <p>A Java command-line tool that parses polynomials and calculates symbolic derivatives.</p>
+              <ul class="tech-list"><li>Java</li><li>Parsing</li><li>Calculus</li></ul>
+              <a class="project-link" href="https://github.com/Raat1902/symbolic-algebra-engine" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No projects match that search yet.</p>
+        <div class="center-link reveal"><a class="button button-dark" href="https://github.com/Raat1902?tab=repositories" target="_blank" rel="noreferrer">Browse all repositories <span>↗</span></a></div>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="section-heading">
-        <p class="eyebrow">Skills</p>
-        <h2>Technical Skills</h2>
+    <section class="about-preview container section-pad">
+      <div class="about-preview-art reveal">
+        <img src="assets/rania-headshot.jpg" alt="Rania Atmani">
+        <div class="about-stamp"><span>RA</span><small>BUILD<br>THOUGHTFULLY</small></div>
       </div>
-
-      <div class="skills-grid">
-        <div>
-          <h3>Programming</h3>
-          <p>Java, C, C++, Python, MATLAB, HTML, CSS, JavaScript</p>
-        </div>
-        <div>
-          <h3>Core Concepts</h3>
-          <p>Object-oriented programming, data structures, algorithms, debugging, testing</p>
-        </div>
-        <div>
-          <h3>Engineering</h3>
-          <p>Embedded systems, circuits, sensors, simulations, technical documentation</p>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <p>Git, GitHub, VS Code, command line, spreadsheets, documentation tools</p>
-        </div>
+      <div class="about-preview-copy reveal delay-1">
+        <div class="section-kicker"><span>03</span><span>ABOUT ME</span></div>
+        <h2 class="section-title">A builder who cares about the <em>why.</em></h2>
+        <p>I enjoy the process of taking an unclear problem, defining a practical version of it, and steadily turning it into a working system. I am most energized by software that mixes clear technical logic with a useful, understandable experience.</p>
+        <a class="button button-dark" href="about.html">Read my story <span>→</span></a>
       </div>
     </section>
 
-    <section class="section resume-section" id="resume">
-      <div>
-        <p class="eyebrow">Resume</p>
-        <h2>Resume</h2>
-        <p>
-          Add your resume PDF to the project folder as <strong>resume.pdf</strong>,
-          then this button will open it.
-        </p>
+    <section class="github-section">
+      <div class="container github-inner">
+        <div class="github-copy reveal">
+          <div class="section-kicker light"><span>04</span><span>BUILDING IN PUBLIC</span></div>
+          <h2>See what I’m<br><em>building next.</em></h2>
+          <p>My GitHub is where I document project work, practice new concepts, and keep growing through consistent implementation.</p>
+          <a class="button button-light" href="https://github.com/Raat1902" target="_blank" rel="noreferrer">Open GitHub profile <span>↗</span></a>
+        </div>
+        <dl class="github-metrics reveal delay-1">
+          <div><dt id="liveRepos">30</dt><dd>repositories</dd></div>
+          <div><dt id="liveFollowers">—</dt><dd>followers</dd></div>
+          <div><dt id="liveStars">—</dt><dd>stars earned</dd></div>
+        </dl>
       </div>
-      <a class="btn primary" href="resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
     </section>
 
-    <section class="section" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Get In Touch</h2>
-        <p class="section-subtitle">
-          Replace these placeholders with your real links before publishing.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <p><strong>Email:</strong> your.email@example.com</p>
-        <p><strong>GitHub:</strong> github.com/yourusername</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/yourusername</p>
+    <section class="contact-section container section-pad" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="eyebrow">LET’S CONNECT</p>
+          <h2 class="section-title">Have an opportunity<br>or project in mind?</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:raniaatmani22@gmail.com">Email me <span>↗</span></a>
+          <a class="contact-text" href="https://www.linkedin.com/in/rania-atmani-garmavich-13a038365" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          <a class="contact-text" href="https://github.com/Raat1902" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Rania Atmani. Built with HTML, CSS, and JavaScript.</p>
+  <footer class="footer container">
+    <p>© <span id="year"></span> Rania Atmani. Designed and built with HTML, CSS, and JavaScript.</p>
+    <a href="#top">Back to top ↑</a>
   </footer>
 
   <script src="script.js"></script>

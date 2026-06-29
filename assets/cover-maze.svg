@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10182d"/>
+      <stop offset="100%" stop-color="#172548"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7f463"/>
+      <stop offset="100%" stop-color="#8faeff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#060b19" flood-opacity=".42"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dae5ff" opacity=".10" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect width="1200" height="680" fill="url(#grid)"/>
+  
+<rect x="260" y="105" width="680" height="470" rx="28" fill="#f8f7f2"/>
+<g stroke="#172548" stroke-width="13" fill="none" stroke-linecap="square">
+<path d="M324 160H874V514H324Z"/><path d="M400 160V278H538V160M400 514V409H470V345H611V435H746V316H874M538 278V347H688V278M324 278H400M324 409H470M688 347V435M538 435V514M746 435V514"/>
+</g><circle cx="350" cy="188" r="16" fill="#b7f463"/><circle cx="845" cy="480" r="16" fill="#ff9ad2"/><path d="M350 188C460 209 517 358 611 345S731 335 845 480" stroke="#8faeff" stroke-width="8" fill="none" stroke-dasharray="10 12"/>
+<text x="82" y="70" fill="#eef2ff" font-family="Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="2">MAZE GENERATOR + SOLVER</text>
+
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151232"/>
+      <stop offset="100%" stop-color="#172548"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7f463"/>
+      <stop offset="100%" stop-color="#8faeff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#060b19" flood-opacity=".42"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dae5ff" opacity=".10" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect width="1200" height="680" fill="url(#grid)"/>
+  
+  <circle cx="1050" cy="590" r="270" fill="#8faeff" opacity=".13"/>
+  <g filter="url(#shadow)">
+    <rect x="185" y="97" width="835" height="495" rx="30" fill="#f8f7f2"/>
+    <g transform="translate(315 155)">
+      <rect width="440" height="440" rx="10" fill="#1b2845"/>
+      <g fill="#c4d0e8">
+        <rect x="0" y="0" width="55" height="55"/><rect x="110" y="0" width="55" height="55"/><rect x="220" y="0" width="55" height="55"/><rect x="330" y="0" width="55" height="55"/>
+        <rect x="55" y="55" width="55" height="55"/><rect x="165" y="55" width="55" height="55"/><rect x="275" y="55" width="55" height="55"/><rect x="385" y="55" width="55" height="55"/>
+        <rect x="0" y="110" width="55" height="55"/><rect x="110" y="110" width="55" height="55"/><rect x="220" y="110" width="55" height="55"/><rect x="330" y="110" width="55" height="55"/>
+        <rect x="55" y="165" width="55" height="55"/><rect x="165" y="165" width="55" height="55"/><rect x="275" y="165" width="55" height="55"/><rect x="385" y="165" width="55" height="55"/>
+        <rect x="0" y="220" width="55" height="55"/><rect x="110" y="220" width="55" height="55"/><rect x="220" y="220" width="55" height="55"/><rect x="330" y="220" width="55" height="55"/>
+        <rect x="55" y="275" width="55" height="55"/><rect x="165" y="275" width="55" height="55"/><rect x="275" y="275" width="55" height="55"/><rect x="385" y="275" width="55" height="55"/>
+        <rect x="0" y="330" width="55" height="55"/><rect x="110" y="330" width="55" height="55"/><rect x="220" y="330" width="55" height="55"/><rect x="330" y="330" width="55" height="55"/>
+        <rect x="55" y="385" width="55" height="55"/><rect x="165" y="385" width="55" height="55"/><rect x="275" y="385" width="55" height="55"/><rect x="385" y="385" width="55" height="55"/>
+      </g>
+      <g fill="#b7f463"><circle cx="137" cy="193" r="23"/><circle cx="302" cy="248" r="23"/></g>
+      <path d="M137 193 C200 123 250 286 302 248" stroke="#ff9ad2" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="11 12"/>
+      <text x="183" y="254" fill="#0d1424" font-family="Arial, sans-serif" font-size="63" font-weight="700">♞</text>
+    </g>
+    <rect x="795" y="158" width="170" height="138" rx="15" fill="#e7edf6"/><rect x="815" y="184" width="115" height="12" rx="6" fill="#1b2845"/><rect x="815" y="213" width="92" height="9" rx="4" fill="#7d8ba4"/><rect x="815" y="238" width="126" height="9" rx="4" fill="#7d8ba4"/>
+    <rect x="795" y="318" width="170" height="220" rx="15" fill="#172548"/><text x="819" y="355" fill="#b7f463" font-family="monospace" font-size="14">MOVE REVIEW</text><path d="M820 470 L850 432 L881 446 L916 380" stroke="#8faeff" stroke-width="7" fill="none"/><circle cx="916" cy="380" r="8" fill="#b7f463"/>
+  </g>
+  <text x="83" y="70" fill="#eef2ff" font-family="Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="2">CHESSUP CHESS STUDIO</text>
+
+</svg>
